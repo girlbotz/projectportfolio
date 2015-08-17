@@ -42,38 +42,32 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void openSpotify(View view){
-        String text = "This button will open Spotify app";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-        toast.show();
+        openToastForApp(R.string.spotify_app);
     }
 
     public void openScoresApp(View view){
-        String text = "This button will open Scores app";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-        toast.show();
+        openToastForApp(R.string.scores_app);
     }
 
     public void openLibraryApp(View view){
-        String text = "This button will open Library app";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-        toast.show();
+        openToastForApp(R.string.library_app);
     }
 
     public void openBuildItBigger(View view){
-        String text = "This button will open Build It Bigger";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-        toast.show();
+        openToastForApp(R.string.build_it_bigger);
     }
 
     public void openXYZReader(View view){
-        String text = "This button will open XYZ Reader";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
-        toast.show();
+        openToastForApp(R.string.xyz_reader);
     }
 
     public void openOwnApp(View view){
-        String text = "This button will open my own app!";
-        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+        openToastForApp(R.string.own_app);
+    }
+
+    private void openToastForApp(int appName) {
+        Toast toast = Toast.makeText(getApplicationContext(), "This button will open " +
+                getApplicationContext().getResources().getString(appName), Toast.LENGTH_SHORT);
         toast.show();
     }
 }
